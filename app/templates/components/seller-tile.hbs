@@ -1,5 +1,5 @@
 <div class="col-xs-4">
-  <h3>{{seller.name}}</h3>
+  {{#link-to 'seller' seller}}<h3>{{seller.name}}</h3>{{/link-to}}
   <p>{{seller.description}}</p>
   <img class="img-thumbnail img-responsive" src="{{seller.image}}" alt="profile pic of {{seller.name}}">
 </div>

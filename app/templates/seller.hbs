@@ -1,0 +1,14 @@
+{{seller-full seller=model}}
+<div class="container">
+  <div class="row">
+    <h1>featured boots</h1>
+  </div>
+  <div class="row well">
+    {{#each model.products as |product|}}
+      {{product-tile product=product}}
+    {{/each}}
+  </div>
+</div>
+<div class="new-product well">
+  {{new-product-form saveProduct="saveProduct" seller=model}}
+</div>
