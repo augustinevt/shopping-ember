@@ -1,0 +1,13 @@
+<h1>Here are all the products!</h1>
+{{new-product-form saveProduct="saveProduct"}}
+<hr>
+<div class="container">
+  <div class="row">
+    <h1>featured boots</h1>
+  </div>
+  <div class="row well">
+    {{#each model as |product|}}
+      {{product-tile product=product}}
+    {{/each}}
+  </div>
+</div>

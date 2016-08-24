@@ -1,0 +1,19 @@
+
+<div class="container">
+  <div class="row">
+    <h1>featured boots</h1>
+  </div>
+  <div class="row well">
+    {{#each model.products as |product|}}
+      {{product-tile product=product}}
+    {{/each}}
+  </div>
+  <div class="row">
+    <h1>featured sellers</h1>
+  </div>
+  <div class="row well">
+    {{#each model.sellers as |seller|}}
+      {{seller-tile seller=seller}}
+    {{/each}}
+  </div>
+</div>

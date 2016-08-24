@@ -1,0 +1,9 @@
+import DS from 'ember-data';
+
+export default DS.Model.extend({
+  name: DS.attr(),
+  description: DS.attr(),
+  image: DS.attr(),
+  products: DS.hasMany('product', {async: true}),
+  feedback: DS.hasMany('feedback', {async: true}),
+});
