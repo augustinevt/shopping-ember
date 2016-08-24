@@ -1,0 +1,12 @@
+{{#if shoppingCart.items.[0]}}
+  <table>
+    <tr>
+      <th>hmm</th><th>Product</th><th>Quantity</th><th>Seller</th><th>Cost Each</th><th>Cost Total</th>
+    </tr>
+    {{#each shoppingCart.items as |item|}}
+     {{cart-item-tile product=item.product qty=item.qty tagName=''}}
+    {{/each}}
+  </table>
+{{else}}
+CART EMPTY
+{{/if}}

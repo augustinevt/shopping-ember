@@ -9,6 +9,8 @@ Router.map(function() {
   this.route('sellers');
   this.route('products');
   this.route('seller', {path: 'seller/:seller_id'});
+  this.route('product', {path: 'product/:product_id'});
+  this.route('cart');
 });
 
 export default Router;

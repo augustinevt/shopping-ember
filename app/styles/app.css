@@ -1,0 +1,30 @@
+.addToCart {
+  display: block;
+  border-radius: 7px;
+  background-color: #CDE;
+  margin: 3px;
+}
+
+.inline {
+  display: inline;
+}
+
+img {
+  max-height: 240px;
+}
+
+td, th {
+  border: 1px solid black;
+}
+
+.cart-image {
+  width: 50px;
+}
+
+.NoDivBadDivStopDiv {
+  display: inline;
+}
+
+.cost {
+  font-weight: bold;
+}

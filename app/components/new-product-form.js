@@ -8,6 +8,7 @@ export default Ember.Component.extend({
         description: this.get('description'),
         image: this.get('image'),
         seller: this.get('seller'),
+        cost: this.get('cost'),
       };
       console.log('saveProduct');
       this.sendAction('saveProduct', params);
