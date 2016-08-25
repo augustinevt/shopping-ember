@@ -1,0 +1,9 @@
+{{#if editing}}
+  {{input value=product.name}}
+  {{input value=product.description}}
+  {{input value=product.image}}
+  {{input type="number" value=product.cost}}
+  <button {{action 'updateProduct' product}}>save</button>
+{{else}}
+  <button {{action "edit"}}>Edit</button>
+{{/if}}

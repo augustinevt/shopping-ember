@@ -1,1 +1,9 @@
 {{model.name}}
+${{model.cost}}
+{{model.description}}
+
+{{new-feedback product=model saveFeedback="saveFeedback"}}
+
+{{#each model.feedback as |feedback|}}
+  {{feedback.comment}}<br>
+{{/each}}

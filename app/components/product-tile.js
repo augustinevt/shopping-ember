@@ -5,6 +5,6 @@ export default Ember.Component.extend({
   actions: {
     addToCart(item) {
       this.get('shoppingCart').add(item);
-    }
+    },
   }
 });

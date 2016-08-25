@@ -5,10 +5,17 @@
   </div>
   <div class="row well">
     {{#each model.products as |product|}}
-      {{product-tile product=product}}
+      <div class="col-sm-4">
+        {{product-tile product=product}}
+        {{delete-seller-product product=product deleteProduct="deleteProduct" tagName=''}}
+        {{edit-seller-product product=product updateProduct="updateProduct" tagName=''}}
+      </div>
     {{/each}}
   </div>
 </div>
 <div class="new-product well">
   {{new-product-form saveProduct="saveProduct" seller=model}}
+</div>
+<div class="well">
+  {{edit-seller seller=model updateSeller='updateSeller' deleteSeller="deleteSeller" }}
 </div>

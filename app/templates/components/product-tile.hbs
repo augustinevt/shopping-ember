@@ -1,10 +1,12 @@
 
-<div class="col-sm-4">
+
   {{#link-to 'product' product}}<h3>{{product.name}}</h3>{{/link-to}}
 
   <h4>by {{product.seller.name}}</h4>
   <p>{{product.description}}</p>
   <span class="cost">${{product.cost}}</span>
   <button class='addToCart' {{action 'addToCart' product}}>Add to cart</button>
-  <img class="img-thumbnail img-responsive" src="{{product.image}}" alt="product image" />
-</div>
+  <img class="img-thumbnail img-responsive" src="{{product.image}}" alt="product image" /><br>
+  {{#if sellerPage}}
+    <button {{action "deleteProduct" product}}>Delete</button>
+  {{/if}}
