@@ -44,6 +44,15 @@ export default Ember.Route.extend({
       });
       product.save();
       this.transitionTo('seller', this.get('currentModel.id'));
+    },
+    saveFeedback(params, type) {
+      var newFeedback = this.store.createRecord('feedback', params);
+      var target = params[type];
+      target.get('feedback').addObject(newFeedback);
+      newFeedback.save().then(function() {
+        return target.save();
+      });
+      this.transitionTo(type, target.id);
     }
   }
 });

@@ -5,14 +5,14 @@ export default Ember.Route.extend({
     return this.store.findRecord('product', params.product_id);
   },
   actions: {
-    saveFeedback(params) {
+    saveFeedback(params, type) {
       var newFeedback = this.store.createRecord('feedback', params);
-      var product = params.product;
-      product.get('feedback').addObject(newFeedback);
+      var target = params[type];
+      target.get('feedback').addObject(newFeedback);
       newFeedback.save().then(function() {
-        return product.save();
+        return target.save();
       });
-      this.transitionTo('product', product.id);
+      this.transitionTo(type, target.id);
     }
   }
 });

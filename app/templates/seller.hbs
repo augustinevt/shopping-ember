@@ -19,3 +19,10 @@
 <div class="well">
   {{edit-seller seller=model updateSeller='updateSeller' deleteSeller="deleteSeller" }}
 </div>
+{{new-feedback target=model type="seller" saveFeedback="saveFeedback"}}
+
+
+
+{{#each model.feedback as |feedback|}}
+  {{feedback.comment}}<br>
+{{/each}}

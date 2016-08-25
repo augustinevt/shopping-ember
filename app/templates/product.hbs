@@ -2,7 +2,7 @@
 ${{model.cost}}
 {{model.description}}
 
-{{new-feedback product=model saveFeedback="saveFeedback"}}
+{{new-feedback target=model type="product" saveFeedback="saveFeedback"}}
 
 {{#each model.feedback as |feedback|}}
   {{feedback.comment}}<br>
