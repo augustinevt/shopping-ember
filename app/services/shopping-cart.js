@@ -7,10 +7,8 @@ export default Ember.Service.extend({
     var items = this.get('items');
     var alreadyAdded = false;
     items.forEach((item) => {
-      console.log(item.product.id);
       if(item.product.id === product.id){
         item.qty ++;
-        console.log( item.qty);
         alreadyAdded = true;
         return;
       }

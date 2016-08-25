@@ -6,7 +6,6 @@ export default Ember.Route.extend({
   },
   actions: {
     saveProduct(params){
-      console.log(params);
       var newProduct = this.store.createRecord('product', params);
       var seller = params.seller;
       seller.get('products').addObject(newProduct);
