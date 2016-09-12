@@ -1,7 +1,6 @@
 # Shopping
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+An E-Commerce store for boots using ember.
 
 ## Prerequisites
 
