@@ -1,6 +1,6 @@
 # Shopping
 
-An E-Commerce store for boots using ember.
+An E-Commerce for boots using ember.
 
 ## Prerequisites
 
